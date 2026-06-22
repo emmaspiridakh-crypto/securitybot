@@ -8,8 +8,11 @@ from keep_alive import keep_alive
 
 load_dotenv()
 
+TOKEN        = os.getenv("TOKEN")
 INSTALLER_ID = os.getenv("INSTALLER_ID")
 
+if not TOKEN:
+    print("❌ TOKEN missing from .env"); exit(1)
 if not INSTALLER_ID:
     print("❌ INSTALLER_ID missing from .env"); exit(1)
 
