@@ -25,7 +25,7 @@ def build_panel(cfg: dict, disabled: list, guild_icon: str | None) -> list:
     header_section = {
         "type": 9,
         "components": [
-            {"type": 10, "content": "# 🔒 Security Control Panel\nΔιαχείριση modules & ρυθμίσεων."}
+            {"type": 10, "content": "# Security Control Panel."}
         ],
     }
     if guild_icon:
@@ -109,7 +109,7 @@ def build_panel(cfg: dict, disabled: list, guild_icon: str | None) -> list:
                     "type": 9,
                     "components": [{"type": 10, "content": (
                         f"{_icon('bot_verify', disabled)} **🤖 Bot Verification**\n"
-                        f"Zero permissions μέχρι accept"
+                        f"Zero permissions until accept"
                     )}],
                     "accessory": {
                         "type": 2, "label": "Toggle Bot Verify",
