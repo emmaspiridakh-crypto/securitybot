@@ -56,7 +56,7 @@ class Owner(commands.Cog):
         if str(user_id) == str(self.bot.installer_id):
             await respond_cv2(interaction, [
                 {"type": 17, "accent_color": 0xED4245, "components": [
-                    {"type": 10, "content": "❌ Δεν μπορείς να αφαιρέσεις τον bot installer."}
+                    {"type": 10, "content": "❌ Δεν μπορείς να αφαιρέσεις τον bot owner."}
                 ]}
             ], ephemeral=True)
             return
