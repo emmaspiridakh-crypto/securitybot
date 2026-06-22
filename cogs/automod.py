@@ -75,7 +75,7 @@ class AutoMod(commands.Cog):
                                         f"**{member.name}** ({member.mention})\n"
                                         f"**ID:** `{member.id}`\n"
                                         f"**Created:** <t:{int(member.created_at.timestamp())}:F>\n\n"
-                                        f"🔒 Zero permissions μέχρι Accept."
+                                        f"🔒 Zero permissions until Accept."
                                     )}
                                 ],
                                 "accessory": {
@@ -150,10 +150,10 @@ class AutoMod(commands.Cog):
                         "type": 9,
                         "components": [
                             {"type": 10, "content": (
-                                f"## 🚨 ALT ACCOUNT DETECTED\n"
-                                f"**👤 User:** {member.mention} (`{member.id}`)\n"
-                                f"**📅 Age:** **{age_days} days** (threshold: {threshold})\n"
-                                f"**📆 Created:** <t:{int(member.created_at.timestamp())}:F>"
+                                f"##  ALT ACCOUNT DETECTED\n"
+                                f"**> User:** {member.mention} (`{member.id}`)\n"
+                                f"**> Age:** **{age_days} days** (threshold: {threshold})\n"
+                                f"**> Created:** <t:{int(member.created_at.timestamp())}:F>"
                             )}
                         ],
                         "accessory": {
@@ -209,10 +209,10 @@ class AutoMod(commands.Cog):
                             "type": 9,
                             "components": [
                                 {"type": 10, "content": (
-                                    f"## 🔑 TOKEN DETECTED & DELETED\n"
-                                    f"**👤 User:** {author.mention} (`{author.id}`)\n"
-                                    f"**📢 Channel:** {message.channel.mention}\n\n"
-                                    f"⚠️ **Αν είναι το token σου, άλλαξέ το ΑΜΕΣΑ!**"
+                                    f"##  TOKEN DETECTED & DELETED\n"
+                                    f"**>  User:** {author.mention} (`{author.id}`)\n"
+                                    f"**>  Channel:** {message.channel.mention}\n\n"
+                                    f">  **Αν είναι το token σου, άλλαξέ το ΑΜΕΣΑ!**"
                                 )}
                             ],
                             "accessory": {
@@ -260,10 +260,10 @@ class AutoMod(commands.Cog):
                                 "type": 9,
                                 "components": [
                                     {"type": 10, "content": (
-                                        f"## 🔗 Link Detected & Deleted\n"
-                                        f"**👤 User:** {author.mention} (`{author.id}`)\n"
-                                        f"**📢 Channel:** {message.channel.mention}\n"
-                                        f"**⏱️ Timeout:** {link_to} min"
+                                        f"##  Link Detected & Deleted\n"
+                                        f"**>  User:** {author.mention} (`{author.id}`)\n"
+                                        f"**>  Channel:** {message.channel.mention}\n"
+                                        f"**>  Timeout:** {link_to} min"
                                     )}
                                 ],
                                 "accessory": {
@@ -309,11 +309,11 @@ class AutoMod(commands.Cog):
                                 "type": 9,
                                 "components": [
                                     {"type": 10, "content": (
-                                        f"## 🚫 Spam Detected\n"
-                                        f"**👤 User:** {author.mention} (`{author.id}`)\n"
-                                        f"**📢 Channel:** {message.channel.mention}\n"
-                                        f"**⏱️ Timeout:** {tout} min\n"
-                                        f"**📊 Threshold:** {thr} msgs / {win}s"
+                                        f"##  Spam Detected\n"
+                                        f"**>  User:** {author.mention} (`{author.id}`)\n"
+                                        f"**>  Channel:** {message.channel.mention}\n"
+                                        f"**>  Timeout:** {tout} min\n"
+                                        f"**>  Threshold:** {thr} msgs / {win}s"
                                     )}
                                 ],
                                 "accessory": {
