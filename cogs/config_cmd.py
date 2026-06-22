@@ -8,12 +8,12 @@ from utils.cv2_helper import respond_cv2, no_access
 CONFIG_KEYS: dict[str, tuple[str, str, str]] = {
     "alt_age_days":       ("int",           "Ηλικία account (μέρες) για alt detection",         "30"),
     "alt_action":         ("choice:kick,log","Τι κάνει το bot στο alt (kick/log)",               "kick"),
-    "spam_threshold":     ("int",           "Πόσα msgs για spam trigger",                        "5"),
-    "spam_window_secs":   ("int",           "Χρονικό παράθυρο spam (δευτερόλεπτα)",              "5"),
+    "spam_threshold":     ("int",           "Πόσα messages για spam trigger",                        "5"),
+    "spam_window_secs":   ("int",           "Χρονικό όριο spam (δευτερόλεπτα)",              "5"),
     "spam_timeout_mins":  ("int",           "Timeout για spam (λεπτά)",                          "10"),
     "link_timeout_mins":  ("int",           "Timeout για links (λεπτά)",                         "60"),
     "mass_action_limit":  ("int",           "Αριθμός actions για anti-nuke trigger",             "3"),
-    "mass_action_window": ("int",           "Χρονικό παράθυρο anti-nuke (δευτερόλεπτα)",        "10"),
+    "mass_action_window": ("int",           "Χρονικό όριο anti-nuke (δευτερόλεπτα)",        "10"),
 }
 
 
@@ -25,7 +25,7 @@ class ConfigCmd(commands.Cog):
         return await Database.is_server_owner(str(user_id), self.bot.installer_id)
 
     @app_commands.command(name="config", description="Ρυθμίσεις security bot")
-    @app_commands.describe(key="Το key (κενό = εμφάνιση όλων)", value="Η νέα τιμή")
+    @app_commands.describe(key="Το key (κενό = εμφάνιση όλων)", value="ποσό")
     async def config(self, interaction: discord.Interaction,
                      key: str = None, value: str = None):
         if not await self._is_owner(interaction.user.id):
