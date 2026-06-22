@@ -179,14 +179,14 @@ def build_status(cfg: dict, disabled: list, wl_u: int, wl_b: int, wl_c: int, gui
 
 def build_logs(events: list, guild_icon: str | None) -> list:
     EMOJI = {
-        "token_detected":  "🔑",
-        "link_detected":   "🔗",
-        "spam_detected":   "🚫",
-        "alt_detected":    "🚨",
-        "bot_join":        "🤖",
-        "mass_action":     "⚡",
-        "channel_delete":  "🗑️",
-        "lockdown":        "🔒",
+        "token_detected":  ">",
+        "link_detected":   ">",
+        "spam_detected":   ">",
+        "alt_detected":    ">",
+        "bot_join":        ">",
+        "mass_action":     ">",
+        "channel_delete":  ">",
+        "lockdown":        ">",
     }
 
     if not events:
