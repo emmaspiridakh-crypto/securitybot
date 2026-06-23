@@ -36,7 +36,7 @@ async def on_ready():
     await bot.change_presence(
         activity=discord.Activity(
             type=discord.ActivityType.watching,
-            name=f"🔒 {len(bot.guilds)} servers"
+            name=f"{len(bot.guilds)} Server Protected"
         )
     )
     print(f"✅ {bot.user} online | Installer: {INSTALLER_ID} | Servers: {len(bot.guilds)}")
@@ -47,7 +47,7 @@ async def on_guild_join(guild: discord.Guild):
     await bot.change_presence(
         activity=discord.Activity(
             type=discord.ActivityType.watching,
-            name=f"🔒 {len(bot.guilds)} servers"
+            name=f"🔒 {len(bot.guilds)} Server Protected"
         )
     )
 
@@ -57,7 +57,7 @@ async def on_guild_remove(guild: discord.Guild):
     await bot.change_presence(
         activity=discord.Activity(
             type=discord.ActivityType.watching,
-            name=f"🔒 {len(bot.guilds)} servers"
+            name=f"🔒 {len(bot.guilds)} Server Protected"
         )
     )
 
