@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "24/7 Astral Security • Server Protected"
+    return "Astral Security"
 
 @app.route("/health")
 def health():
