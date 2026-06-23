@@ -36,7 +36,7 @@ async def on_ready():
     await bot.change_presence(
         activity=discord.Activity(
             type=discord.ActivityType.watching,
-            name="🔒 Server Security"
+            name="24/7 Astral Security • Server Protected"
         )
     )
     print(f"✅ {bot.user} online | Installer: {INSTALLER_ID}")
