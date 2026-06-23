@@ -18,15 +18,15 @@ def build_panel(cfg: dict, disabled: list, guild_icon: str | None) -> list:
     alt_action = cfg.get("alt_action",        "kick")
     alt_days   = cfg.get("alt_age_days",      "30")
     spam_thr   = cfg.get("spam_threshold",    "5")
-    spam_win   = cfg.get("spam_window_secs",  "5")
+    spam_win   = cfg.get("spam_window_secs",  "7")
     spam_to    = cfg.get("spam_timeout_mins", "10")
     link_to    = cfg.get("link_timeout_mins", "60")
     mass_lim   = cfg.get("mass_action_limit", "3")
-    mass_win   = cfg.get("mass_action_window","10")
+    mass_win   = cfg.get("mass_action_window","5")
 
     header = {
         "type": 9,
-        "components": [{"type": 10, "content": "> Security Control Panel\nManage modules and settings."}],
+        "components": [{"type": 10, "content": "> Security Control Panel."}],
     }
     if guild_icon:
         header["accessory"] = {"type": 11, "media": {"url": guild_icon}}
